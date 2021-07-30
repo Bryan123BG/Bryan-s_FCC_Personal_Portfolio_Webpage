@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Open+Sans:wght@400;700&display=swap");
+/* I. Phone Styles */
+/* Overarching div styles */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+}
+section {
+  padding: 2em 1em;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 1em;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1em;
+
+  background-color: hsl(217, 70%, 50%);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.012), 0 12.5px 10px rgba(0, 0, 0, 0.015),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.018), 0 41.8px 33.4px rgba(0, 0, 0, 0.022),
+    0 100px 80px rgba(0, 0, 0, 0.03);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* General font styles */
+h1,
+h2 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+}
+h1 {
+  font-weight: 400;
+}
+h1 b {
+  font-weight: 900;
+  display: block;
+}
+p,
+a {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Welcome section */
+section#welcome-section {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Projects section */
+section#projects {
+  background-color: hsl(217, 70%, 97%);
+}
