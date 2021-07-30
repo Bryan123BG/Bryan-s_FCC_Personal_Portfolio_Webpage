@@ -58,6 +58,8 @@ h2 {
   font-family: "Merriweather", "Times New Roman", Times, serif;
 }
 h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
   font-weight: 400;
   display: block;
 }
@@ -79,10 +81,6 @@ section#welcome-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
 }
 
 /* Projects section */
