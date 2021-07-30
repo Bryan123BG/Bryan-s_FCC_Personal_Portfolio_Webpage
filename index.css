@@ -4,33 +4,52 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-padding-top: 3em;
 }
 body {
   width: 100%;
 }
 section {
+  width: 100%;
+}
+div#Welcome-content-wrapper,
+section#projects,
+div#GitHub-content-wrapper {
   padding: 2em 1em;
 }
 
 /* Navigation */
-nav {
+header {
   position: fixed;
   width: 100%;
-  padding: 1em;
+  z-index: 100;
 
+  background-color: hsl(217, 70%, 30%);
+  box-shadow: 0 2.8px 2.2px hsla(217, 70%, 50%, 0.02),
+    0 6.7px 5.3px hsla(217, 70%, 50%, 0.028),
+    0 12.5px 10px hsla(217, 70%, 50%, 0.035),
+    0 22.3px 17.9px hsla(217, 70%, 50%, 0.042),
+    0 41.8px 33.4px hsla(217, 70%, 50%, 0.05),
+    0 100px 80px hsla(217, 70%, 50%, 0.07);
+}
+nav {
   display: grid;
   grid-auto-flow: column;
+  grid-auto-columns: max-content;
   grid-column-gap: 1em;
-
-  background-color: hsl(217, 70%, 50%);
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.008),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.012), 0 12.5px 10px rgba(0, 0, 0, 0.015),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.018), 0 41.8px 33.4px rgba(0, 0, 0, 0.022),
-    0 100px 80px rgba(0, 0, 0, 0.03);
+  padding: 1em;
 }
 nav a {
   color: white;
   text-decoration: none;
+  border-radius: 0.1em;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+nav a:hover,
+nav a:focus {
+  box-shadow: 0 0 0 0.2em hsl(217, 70%, 30%), 0 0 0 0.35em hsl(217, 70%, 80%);
+  transform: translateY(-0.1em);
+  outline: none;
 }
 
 /* General font styles */
@@ -40,6 +59,7 @@ h2 {
 }
 h1 {
   font-weight: 400;
+  display: block;
 }
 h1 b {
   font-weight: 900;
@@ -54,17 +74,176 @@ a {
 section#welcome-section {
   width: 100%;
   height: 100vh;
+  background-color: hsl(217, 70%, 97%);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 0.5em;
 }
 
 /* Projects section */
 section#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-gap: 2em;
+}
+section#projects h2 {
+  grid-column: 1 / -1;
+}
+
+a.project-tile {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 3.5em;
+  justify-items: center;
+  align-items: center;
+  border-radius: 0.5em;
+  text-decoration: none;
+
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+a.project-tile:hover,
+a.project-tile:focus {
+  transform: translateY(-0.3em);
+  box-shadow: 0 0 0 0.2em white, 0 0 0 0.35em hsl(217, 70%, 25%);
+  outline: none;
+}
+
+a.project-tile img {
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+}
+a.project-tile p {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0.5em 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: hsl(217, 70%, 40%);
+  color: white;
+
+  transition: background-color 0.2s ease-out;
+}
+a.project-tile:hover > p,
+a.project-tile:focus > p {
+  background-color: hsl(217, 70%, 50%);
+}
+
+/* GitHub link section */
+section#GitHub {
   background-color: hsl(217, 70%, 97%);
+}
+section#GitHub h2 {
+  margin-bottom: 1em;
+}
+a#profile-link {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 2em min-content;
+  grid-column-gap: 0.5em;
+  align-items: center;
+
+  height: 2em;
+  width: min-content;
+  border-radius: 0.2em;
+
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+a#profile-link:hover,
+a#profile-link:focus {
+  transform: translateY(-0.3em);
+  box-shadow: 0 0 0 0.2em hsl(217, 70%, 97%), 0 0 0 0.35em hsl(217, 70%, 30%);
+  outline: none;
+}
+a#profile-link img {
+  width: 100%;
+}
+a#profile-link p {
+  font-size: 1.5rem;
+  color: hsl(217, 70%, 25%);
+}
+
+/* Footer */
+footer {
+  background-color: hsl(217, 70%, 30%);
+}
+footer p {
+  color: white;
+  padding: 1em;
+}
+
+/* II. Tablet Styles */
+@media (min-width: 600px) {
+  /* Adjusting padding for containers */
+  header,
+  main,
+  section,
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div#Welcome-content-wrapper,
+  section#projects,
+  div#GitHub-content-wrapper {
+    padding: 2em;
+  }
+  header nav,
+  footer p {
+    padding: 1.5em 2em;
+  }
+  header nav,
+  div#Welcome-content-wrapper,
+  section#projects,
+  div#GitHub-content-wrapper,
+  footer p {
+    width: 100%;
+    max-width: 50em;
+  }
+
+  /* Increasing font size */
+  div#Welcome-content-wrapper h1 {
+    font-size: 2.5rem;
+  }
+  div#Welcome-content-wrapper p {
+    font-size: 1.2rem;
+  }
+}
+
+/* III. Computer Styles */
+@media (min-width: 1200px) {
+  /* Adjusting padding for containers */
+  div#Welcome-content-wrapper,
+  section#projects,
+  div#GitHub-content-wrapper {
+    padding: 5em 2em;
+  }
+  header nav,
+  footer p {
+    padding: 1.5em 2em;
+  }
+  header nav,
+  div#Welcome-content-wrapper,
+  section#projects,
+  div#GitHub-content-wrapper,
+  footer p {
+    width: 100%;
+    max-width: 75em;
+  }
+
+  /* Increasing font size */
+  div#Welcome-content-wrapper h1 {
+    font-size: 3rem;
+  }
+  div#Welcome-content-wrapper p {
+    font-size: 1.5rem;
+  }
 }

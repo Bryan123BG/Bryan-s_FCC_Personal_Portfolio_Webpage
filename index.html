@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <nav id="navbar">
-      <a href="#welcome-section">About</a>
-      <a href="#projects">FCC Projects</a>
-      <a href="#GitHub">GitHub Profile</a>
-    </nav>
+    <header>
+      <nav id="navbar">
+        <a href="#welcome-section">About</a>
+        <a href="#projects">FCC Projects</a>
+        <a href="#GitHub">GitHub Profile</a>
+      </nav>
+    </header>
     <main>
       <section id="welcome-section">
-        <h1>Hi! I'm <b>Bryan123BG</b></h1>
-        <p>An upcoming front-end web developer and web designer</p>
+        <div id="Welcome-content-wrapper">
+          <h1>Hi! I'm <b>Bryan123BG</b></h1>
+          <p>An upcoming front-end web developer and web designer</p>
+        </div>
       </section>
       <section id="projects">
         <h2>Here are my past freeCodeCamp (FCC) projects!</h2>
@@ -25,7 +29,10 @@
           class="project-tile"
           target="_blank"
         >
-          <img src="" alt="Steve Jobs tribute page screenshot" />
+          <img
+            src="https://raw.githubusercontent.com/Bryan123BG/Bryan-s_FCC_Personal_Portfolio_Webpage/master/assets/1_Steve-Jobs-Tribute-Page-screenshot.png"
+            alt="Steve Jobs tribute page screenshot"
+          />
           <p>Steve Jobs Tribute Page</p>
         </a>
         <a
@@ -33,7 +40,10 @@
           class="project-tile"
           target="_blank"
         >
-          <img src="" alt="Hobby survey form page screenshot" />
+          <img
+            src="https://raw.githubusercontent.com/Bryan123BG/Bryan-s_FCC_Personal_Portfolio_Webpage/master/assets/2_Hobby-Survey-Form-screenshot.png"
+            alt="Hobby survey form page screenshot"
+          />
           <p>Hobby Survey Form</p>
         </a>
         <a
@@ -42,7 +52,7 @@
           target="_blank"
         >
           <img
-            src=""
+            src="https://raw.githubusercontent.com/Bryan123BG/Bryan-s_FCC_Personal_Portfolio_Webpage/master/assets/3_BryanPlaysMinecraft-YouTube-Channel-Landing-Page-screenshot.png"
             alt="BryanPlaysMinecraft! YouTube channel landing page screenshot"
           />
           <p>BryanPlaysMinecraft! YouTube Channel Landing Page</p>
@@ -52,22 +62,37 @@
           class="project-tile"
           target="_blank"
         >
-          <img src="" alt="LaTeX getting started guide page screenshot" />
+          <img
+            src="https://raw.githubusercontent.com/Bryan123BG/Bryan-s_FCC_Personal_Portfolio_Webpage/master/assets/4_LaTeX-Getting-Started-Guide-screenshot.png"
+            alt="LaTeX getting started guide page screenshot"
+          />
           <p>LaTeX Getting Started Guide</p>
         </a>
       </section>
       <section id="GitHub">
-        <h2>Here is my GitHub profile page!</h2>
-        <a
-          id="profile-link"
-          href="https://github.com/Bryan123BG"
-          target="_blank"
-        >
-          <img src="" alt="GitHub logo" />
-          <p>GitHub</p>
-        </a>
+        <div id="GitHub-content-wrapper">
+          <h2>Here is my GitHub profile page!</h2>
+          <a
+            id="profile-link"
+            href="https://github.com/Bryan123BG"
+            target="_blank"
+          >
+            <img
+              src="https://raw.githubusercontent.com/Bryan123BG/Bryan-s_FCC_Personal_Portfolio_Webpage/master/assets/GitHub-Mark-64px.png"
+              alt="GitHub logo"
+            />
+            <p>GitHub</p>
+          </a>
+        </div>
       </section>
     </main>
+    <footer>
+      <p>
+        This is a fake portfolio; only for the purposes of completing the
+        required projects for the freeCodeCamp Responsive Web Design
+        certification
+      </p>
+    </footer>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
